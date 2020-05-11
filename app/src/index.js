@@ -136,6 +136,10 @@ class Game extends React.Component {
       status = 'Next player: ' + (this.state.xIsNext ? 'X' : 'O');
     }
 
+    if (current.squares.length == history.length -1){
+      status = 'Draw'
+    }
+
     return (
       <div className="game">
         <div className="game-board">
@@ -147,6 +151,7 @@ class Game extends React.Component {
         </div>
         <div className="game-info">
           <div>{status}</div>
+          <hr></hr>
           <button onClick={() => this.handleOrder()}>Move List Order: {ascendingStatus}</button>
           <ol>{moves}</ol>
         </div>
