@@ -136,7 +136,7 @@ class Game extends React.Component {
       status = 'Next player: ' + (this.state.xIsNext ? 'X' : 'O');
     }
 
-    if (current.squares.length == history.length -1){
+    if (current.squares.length === history.length -1){
       status = 'Draw'
     }
 
